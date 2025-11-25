@@ -38,4 +38,7 @@ mod <- psem(
 # 1. Coefficients and R-squared for each component model (lm)
 # 2. Tests of Directed Separation (conditional independence)
 # 3. Model fit statistics (e.g., Fisher's C, AIC)
+
 summary(mod)
+
+# Note: The published Figure 5 diagram itself (arrows and boxes) was assembled manually in Adobe Illustrator using the numerical outputs from this script. Hence, there is no R code that reproduces the exact graphical layout of Figure 5, but all statistics are fully reproducible.
