@@ -27,7 +27,7 @@ library(magrittr)
 library(tidyr)      # For data reshaping (gather/pivot_longer)
 
 # Linear Models and GLMM
-library(car)        # For Type III ANOVA
+library(car)        # For Typw II and Type III ANOVA
 library(emmeans)    # For Post-hoc comparisons
 library(glmmTMB)    # For Location-Scale GLMM (Figure S7)
 library(ggsignif)   # For adding significance bars
