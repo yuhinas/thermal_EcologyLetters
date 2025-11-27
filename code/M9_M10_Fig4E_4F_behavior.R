@@ -8,8 +8,8 @@ library(ggsignif)   # For adding significance bars to ggplot
 # --------------------------------------------------------------------
 
 # Read behavior data and individual data
-data_b <- read.csv("behavior.csv")
-data_i <- read.csv("individual.csv")
+data_b <- read.csv("data/behavior.csv")
+data_i <- read.csv("data/individual.csv")
 
 # --- Behavior Variable Construction ---
 
@@ -68,6 +68,7 @@ figure_4E <- ggplot(data = yv_4E, aes(x = treat, y = fit, fill = treat)) +
     values = c("control" = "grey", "maggot" = "dimgray"),
     labels = c("control" = "control", "maggot" = "blowfly")
   ) +
+  ylim(0,2300)+
   theme_classic() +
   theme(text = element_text(size = 21)) +
   # Error bars (based on SE) - Corrected the extra comma
@@ -111,6 +112,7 @@ figure_4F <- ggplot(data = yv_4F, aes(x = treat, y = fit, fill = treat)) +
     values = c("control" = "grey", "maggot" = "dimgray"),
     labels = c("control" = "control", "maggot" = "blowfly")
   ) +
+  ylim(0,0.1)+
   theme_classic() +
   theme(text = element_text(size = 21)) + 
   # Error bars (based on SE) - Corrected the extra comma
@@ -132,5 +134,6 @@ figure_4F <- ggplot(data = yv_4F, aes(x = treat, y = fit, fill = treat)) +
     textsize = 7, 
     vjust = 0.3
   )
+
 
 print(figure_4F)
