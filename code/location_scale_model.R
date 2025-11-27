@@ -11,7 +11,7 @@ library(ggsignif)   # For adding significance bars to ggplot
 # 2. Data Loading and Preparation
 # --------------------------------------------------------------------
 
-data_i <- read.csv("individual.csv")
+data_i <- read.csv("data/individual.csv")
 
 # Convert the social rank variable (mi_hier) to a factor
 data_i$mi_hier <- as.factor(data_i$mi_hier)
@@ -84,7 +84,7 @@ figure_S7 <- ggplot(data = emm, aes(x = mi_hier, y = emmean, fill = treat)) +
   geom_signif(
     y_position = c(2.1, 2.3, 2.5), 
     xmin = c(0.78, 1.78, 0.78), 
-    xmax = c(1.22, 2.22, 2.78),
+    xmax = c(1.22, 2.78, 2.78),
     annotation = c("*", "*", "***"), 
     tip_length = 0, 
     size = 1, 
@@ -96,5 +96,6 @@ figure_S7 <- ggplot(data = emm, aes(x = mi_hier, y = emmean, fill = treat)) +
   
   # Custom x-axis labels
   scale_x_discrete(labels = c("1" = "α", "2" = "β", "3" = "γ"))
+
 
 print(figure_S7)
