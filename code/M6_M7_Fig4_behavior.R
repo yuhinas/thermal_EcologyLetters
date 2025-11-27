@@ -3,15 +3,16 @@
 # --------------------------------------------------------------------
 library(magrittr)   # For piping functionality (e.g., %>%)
 library(dplyr)      # For data manipulation and piping
+library(car)        # For type II ANOVA
 library(ggplot2)    # For data visualization
 # --------------------------------------------------------------------
 # 2. Data Loading and Preparation
 # --------------------------------------------------------------------
 
 # Read time-series body temperature, behavior, and individual data
-data_t <- read.csv("body_temp.csv")
-data_b <- read.csv("behavior.csv")
-data_i <- read.csv("individual.csv")
+data_t <- read.csv("data/body_temp.csv")
+data_b <- read.csv("data/behavior.csv")
+data_i <- read.csv("data/individual.csv")
 
 # --- Behavior Variable Construction ---
 
@@ -55,10 +56,12 @@ data1_c <- subset(data1, data1$treat == "control") # Control group
 # M6 (Control group model, used for Fig 4A, 4B)
 c1 <- lm(mean_temp ~ investment + conflict_invest, data = data1_c)
 summary(c1)
+Anova(c1, type=2) # Get F value and p value
 
 # M7 (Blowfly group model, used for Fig 4C, 4D)
 m1 <- lm(mean_temp ~ investment + conflict_invest, data = data1_m)
 summary(m1)
+Anova(m1, type=2) # Get F value and p value
 
 # --------------------------------------------------------------------
 # 4. Visualization (Figure 4A - 4D)
@@ -154,5 +157,6 @@ figure_4D <- ggplot(data = yv_4D, aes(x = conflict_invest, y = fit)) +
   theme(text = element_text(size = 21)) +
   labs(x = "Number of social conflict (per unit time)", y = "Relative body temperature (°C)") +
   coord_cartesian(ylim = c(-1, 5), expand = TRUE)
+
 
 print(figure_4D)
