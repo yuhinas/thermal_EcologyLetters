@@ -12,7 +12,7 @@ library(ggplot2)    # For data visualization
 # --------------------------------------------------------------------
 
 # Read the full dataset (individual-level data)
-data_i <- read.csv("individual.csv")
+data_i <- read.csv("data/individual.csv")
 
 # Convert the social rank variable (mi_hier) to a factor
 data_i$mi_hier <- as.factor(data_i$mi_hier)
@@ -216,4 +216,5 @@ figure_S8 <- ggplot(data = emm_df, aes(x = mi_hier, y = emmean, fill = treat)) +
   scale_x_discrete(labels = c("1" = "α", "2" = "β", "3" = "γ"))
 
 # Display the figure
+
 print(figure_S8)
