@@ -11,7 +11,7 @@ library(ggsignif)   # For adding significance bars to ggplot
 # --------------------------------------------------------------------
 
 # Read the full dataset (individual-level data)
-data_i <- read.csv("individual.csv")
+data_i <- read.csv("data/individual.csv")
 
 # Convert the social rank variable (mi_hier) to a factor
 data_i$mi_hier <- as.factor(data_i$mi_hier)
@@ -80,3 +80,4 @@ figure_3 <- ggplot(data=data_i, aes(x=mi_hier, y=mean_temp, fill=treat)) +
 
 # Display and save the figure
 print(figure_3)
+
