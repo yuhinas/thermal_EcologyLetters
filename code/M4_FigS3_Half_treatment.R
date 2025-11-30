@@ -10,8 +10,8 @@ library(ggsignif)   # For adding significance bars to ggplot
 # --------------------------------------------------------------------
 
 # Read individual-level data and time-series body temperature data
-data_i <- read.csv("individual.csv") 
-data_t <- read.csv("body_temp.csv")
+data_i <- read.csv("data/individual.csv") 
+data_t <- read.csv("data/body_temp.csv")
 
 # --- First Half of the Night (Time_Relative_sf <= 5*3600 seconds) ---
 
@@ -119,3 +119,4 @@ figure_S3B <- ggplot(data = yv2, aes(x = treat, y = fit, fill = treat)) +
 # Display the figures
 print(figure_S3A)
 print(figure_S3B)
+
