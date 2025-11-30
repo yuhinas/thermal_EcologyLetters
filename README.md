@@ -1,5 +1,7 @@
 # Interspecific competition reduces energy expenditure by decreasing intragroup conflict in a social burying beetle
 
+[![DOI](https://zenodo.org/badge/958470137.svg)](https://doi.org/10.5281/zenodo.17769641)
+
 This repository contains the R code and analysis scripts supporting the manuscript.
 
 The code provided here allows for the full reproduction of all core statistical models and figures presented in the main text and the supplementary material.
