@@ -25,13 +25,88 @@ For each dataset, we list the variable name, definition, and units.
 | Variable | Description | Unit |
 |---------|--------------|------|
 | Date_dmy | Date of measurement | DD-MM-YYYY |
-| Time_Absolute_hms | Absolute time | Hours-Minutes-Seconds|
-| Time_Absolute_f | Absolute frame number | frames |
-| Time_Relative_hmsf | 
+| Time_Relative_sf | The relative time between the measurement time and the start time of the experiment | Seconds|
+| Observation | Records the unique identification number of the nest | n xxxx |
+| Subject | Records the unique identification tag of the individual within its specific nest | (sex, mark) |
+|Tb | The body temperature of the beetle | °C |
+|Ta | The average temperature across the entire field of view | °C |
+|Tc | The temperature of carcass |°C |
+|Ts | The temperature of soil |°C |
+|Tb.Ta |Tb-Ta|°C |
+|Tb.Tc |Tb-Tc , we use this value as relative body temperature. |°C |
+|Tb.Ts|Tb-Ts|°C |
+|treat| Experimental treatment | control / maggot (blowfly)|
+|mi_hier| Social rank | 1 for alpha, 2 for beta , 3 for gamma |
+|mark| Tha label of the beetle | the mark pattern |
+|nm| Records the unique identification number of the individual across all nests in the entire dataset | (nest number, mark)|
+
+### **2. `individual.csv`**
+
+| Variable | Description | Unit |
+|---------|--------------|------|
+|nm| Records the unique identification number of the individual across all nests in the entire dataset | (nest number, mark)|
+|nest| Records the unique identification number of the nest | n xxxx |
+|treat| Experimental treatment | control / maggot (blowfly)|
+|gender| Individual sex | male / female|
+|i_width| The width of the pronotum| mm|
+|i_weight| Individual body weight | mg|
+|i_body| Body weight divided by pronotum width | mg/mm |
+|i_BMI| Body weight / (pronotum width)^2 | mg/mm^2 |
+|i_age| Age of the beetle| days|
+|i_mark| Tha label of the beetle | the mark pattern |
+|i_invest| Individual investment time| seconds|
+|mi_hier| Social rank | 1 for alpha, 2 for beta , 3 for gamma |
+|i_conflict| Number of social conflicts| times|
+|mean_temp| Average of relative body temperature | °C |
+|max_temp| The maximum of relative body temperature |°C |
+|temp_range| The temperature range between the maximun and the minimum of relative body temperature|°C |
+|group_size| Average group size of the nest| number of beetles|
+|i_wrestle.num| The total count of 'wrestle' behaviors performed by the individual | times |
+|i_attack.num|The total count of 'attack' behaviors performed by the individual | times |
+|i_chase.num|The total count of 'chase' behaviors performed by the individual | times |
+|i_escape.num|The total count of 'escape' behaviors performed by the individual | times |
+|Tb | The body temperature of the beetle | °C |
+|conflict_invest| i_conflict / i_invest | times/seconds|
+|attack_invest|i_attack / i_invest | times/seconds|
+|wrestle_invest|i_wrestle / i_invest | times/seconds|
+|chase_invest|i_chase / i_invest | times/seconds|
+|escape_invest|i_escape / i_invest | times/seconds|
+|Tc | The temperature of carcass |°C |
+
+### **3. `behavior.csv`**
+
+| Variable | Description | Unit |
+|---------|--------------|------|
+|nm| Records the unique identification number of the individual across all nests in the entire dataset | (nest number, mark)|
+|attack_i <br> (where i = = 1 to 10)| The total count of 'attack' behaviors recorded during the $i^{th}$ hour of the observation period| times|
+|wrestle_i <br> (where i = = 1 to 10)| The total count of 'wrestle' behaviors recorded during the $i^{th}$ hour of the observation period| times|
+|chase_i <br> (where i = = 1 to 10)| The total count of 'chase' behaviors recorded during the $i^{th}$ hour of the observation period| times|
+|escape_i <br> (where i = = 1 to 10)| The total count of 'escape' behaviors recorded during the $i^{th}$ hour of the observation period| times|
+|conflict_i <br> (where i = = 1 to 10)| The number of social conflicts recorded during the $i^{th}$ hour of the observation period| times|
+|investment_i <br> (where i = = 1 to 10)| The indiviual investment time recorded during the $i^{th}$ hour of the observation period| seconds|
 
 ## 📦 Running Environment and Required Packages (R Packages)
 
-All analyses were performed in the R environment. Please ensure you have the following essential packages installed and loaded:
+All analyses were performed in the R environment. 
+The manuscript results were generated under the following versions:
+
+### **R Version**
+- R **4.5.1**
+
+### **Package Versions**
+Exact package versions used in the analysis:
+dplyr 1.1.4
+ggplot2 3.5.2
+magrittr 2.0.3
+tidyr 1.3.1
+car 3.1-3
+emmeans 1.11.1
+glmmTMB 1.1.11
+ggsignif 0.6.4
+mgcv 1.9-3
+piecewiseSEM 2.3.1
+
+### **Required libraries**
 
 ```R
 # Core Data Manipulation and Visualization
