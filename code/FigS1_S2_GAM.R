@@ -6,8 +6,8 @@ library(magrittr)   # For piping functionality (e.g., %>%)
 # --------------------------------------------------------------------
 # 2. Data Loading and Preparation
 # --------------------------------------------------------------------
-data_t <- read.csv("body_temp.csv")
-data_i <- read.csv("individual.csv")
+data_t <- read.csv("data/body_temp.csv")
+data_i <- read.csv("data/individual.csv")
 
 # Select necessary columns from individual data (nm, gender, mi_hier)
 data_i <- data_i[, c("nm", "gender")]
@@ -138,3 +138,4 @@ plot_S2_M3 <- data_m %>% subset(., group == "male 3") %>%
   geom_smooth(method = "gam", color = "black", formula = y ~ s(x, bs = "cs")) +
   shared_theme
 print(plot_S2_M3)
+
