@@ -141,7 +141,15 @@ library(piecewiseSEM) # For Structural Equation Modeling (SEM.R)
 
 This section links each R script file to the corresponding figure and statistical model (M1-M10, SEM, GLMM) in the manuscript.
 
-### 1. Thermal Physiology (LM & GAM)
+### 1. Theoretical model
+
+| Script Name | Figure and Table | Core Model | Key Analysis |
+| :--- | :--- | :--- | :--- |
+| `Fig1_model.nb` | **Figure 1A, 1B, 1C, 1D** | Theoretical model | Implements the theoretical model of cooperative investment, conflict, and energetic cost. |
+
+
+
+### 2. Thermal Physiology (LM & GAM)
 
 | Script Name | Figure and Table | Core Model | Key Analysis |
 | :--- | :--- | :--- | :--- |
@@ -154,7 +162,7 @@ This section links each R script file to the corresponding figure and statistica
 | `M4_FigS3_Half_treatment.R` | **Figure S3A, S3B** | **M4-1, M4-2** | Relative body temperature vs. Treatment (First/Second Half). |
 | `M5_FigS4_social_rank.R` | **Figure S4A-S4D** | **M5-C1, C2, B1, B2** | Relative body temperature vs. Social Rank (Split by Treatment and Time Half). |
 
-### 2. Behavior & Interaction (LM & GAM)
+### 3. Behavior & Interaction (LM & GAM)
 
 | Script Name | Figure and Table | Core Model | Key Analysis |
 | :--- | :--- | :--- | :--- |
@@ -162,12 +170,17 @@ This section links each R script file to the corresponding figure and statistica
 | `M9_M10_Fig4E_4F_behavior.R`| **Figure 4E, 4F** | **M9, M10** | Total Cooperative Investment and Conflict Index vs. Treatment Group. |
 | `FigS5_S6_GAM_behavior.R` | **Figure S5, S6** | GAMs | Smooth trends of Cooperative Investment and Conflict behavior across 10 time intervals. |
 
-### 3. Advanced Statistical Models
+### 4. Advanced Statistical Models
 
 | Script Name | Figure and Table | Core Model | Description |
 | :--- | :--- | :--- | :--- |
 | `location_scale_model.R`| **Figure S7** <br> **Table S4**| **GLMM (Location-Scale)** | Analyzes the effects of Treatment and Rank on the **Mean** (location) and **Variance** (scale) of relative body temperature. |
 | `SEM.R` | **Figure 5** | **pSEM** | Piecewise Structural Equation Model testing the causal pathways among Treatment, Behavior (Conflict/Investment), and relative body temperature. |
+
+
+#### Note on Figure 1 (Theoretical model)
+
+Figure 1 is based on a theoretical model implemented in Wolfram Mathematica. This file is provided as the exact code used to generate Figure 1 and can be opened and run in a standard Wolfram Mathematica environment.
 
 #### Note on Figure 5 (SEM path diagram)
 
