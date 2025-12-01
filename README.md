@@ -1,4 +1,4 @@
-<img width="145" height="43" alt="image" src="https://github.com/user-attachments/assets/1e4153bc-0022-4223-b90a-4e1828e8da9b" /><img width="187" height="43" alt="image" src="https://github.com/user-attachments/assets/1819263a-d5ba-48c0-99f0-2b3322181f11" /># Interspecific competition reduces energy expenditure by decreasing intragroup conflict in a social burying beetle
+# Interspecific competition reduces energy expenditure by decreasing intragroup conflict in a social burying beetle
 
 [![DOI](https://zenodo.org/badge/958470137.svg)](https://doi.org/10.5281/zenodo.17769641)
 
