@@ -39,7 +39,7 @@ data1 <- merge(data_i, data_b[, c("nm", "conflict", "investment", "conflict_inve
 # M9: Cooperation (investment) ~ Treatment
 cooperation <- lm(investment ~ treat, data = data1)
 summary(cooperation)
-anova(cooperaration) # Get F value and p value
+anova(cooperation) # Get F value and p value
 
 # M10: Conflict Index (conflict_invest) ~ Treatment
 conflict <- lm(conflict_invest ~ treat, data = data1)
@@ -139,4 +139,5 @@ figure_4F <- ggplot(data = yv_4F, aes(x = treat, y = fit, fill = treat)) +
 
 
 print(figure_4F)
+
 
