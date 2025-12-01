@@ -97,16 +97,16 @@ The manuscript results were generated under the following versions:
 
 ### **Package Versions**
 Exact package versions used in the analysis:
-dplyr 1.1.4
-ggplot2 3.5.2
-magrittr 2.0.3
-tidyr 1.3.1
-car 3.1-3
-emmeans 1.11.1
-glmmTMB 1.1.11
-ggsignif 0.6.4
-mgcv 1.9-3
-piecewiseSEM 2.3.1
+- dplyr 1.1.4
+- ggplot2 3.5.2
+- magrittr 2.0.3
+- tidyr 1.3.1
+- car 3.1-3
+- emmeans 1.11.1
+- glmmTMB 1.1.11
+- ggsignif 0.6.4
+- mgcv 1.9-3
+- piecewiseSEM 2.3.1
 
 ### **Required libraries**
 
