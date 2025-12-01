@@ -1,4 +1,4 @@
-<img width="187" height="43" alt="image" src="https://github.com/user-attachments/assets/1819263a-d5ba-48c0-99f0-2b3322181f11" /># Interspecific competition reduces energy expenditure by decreasing intragroup conflict in a social burying beetle
+<img width="145" height="43" alt="image" src="https://github.com/user-attachments/assets/1e4153bc-0022-4223-b90a-4e1828e8da9b" /><img width="187" height="43" alt="image" src="https://github.com/user-attachments/assets/1819263a-d5ba-48c0-99f0-2b3322181f11" /># Interspecific competition reduces energy expenditure by decreasing intragroup conflict in a social burying beetle
 
 [![DOI](https://zenodo.org/badge/958470137.svg)](https://doi.org/10.5281/zenodo.17769641)
 
@@ -33,10 +33,21 @@ For each dataset, we list the variable name, definition, and units.
 | Time_Absolute_f | Fractional part of the absolute time in milliseconds, taken from Date_Time_Absolute_dmy_hmsf | |
 | Time_Relative_hmsf | Time of the event relative to the start of the video recording | mm:ss.fraction of a second |
 | Time_Relative_hms | Same relative time as Time_Relative_hmsf, expressed as hour:minute:second | hh:mm:ss |
-| Time_Relative_f | Fractional part of the relative time in milliseconds | DD-MM-YYYY |
-| Date_dmy | Date of measurement | DD-MM-YYYY |
-| Date_dmy | Date of measurement | DD-MM-YYYY |
-
+| Time_Relative_f | Fractional part of the relative time in milliseconds | |
+| Time_Relative_sf | Relative time since the start of the video, expressed as total seconds including fractionl seconds | |
+| Duration_sf | Duration of the behaviour from its start to its end, in seconds including fractional seconds, for instantaneous state points this value is zero | |
+| colony | Nest ID (colony ID) used in the experiment, identifies which nest this event belongs to  |n xxxx |
+| Event_Log |  Identifier of the event log file | |
+| Subject | ID of the focal beetle in this event, including sex and an individual symbol| |
+| Behavior | Behaviour category of the focal beetle in this event. | "0 access carcass" = beetle is not on the carcass; "1 access carcass" = beetle is on the carcass; "attack" = attacking another beetle; "chase" = chasing another beetle; "wrestle" = wrestling or fighting; "escape" = escaping from another beetle|
+| Modifier_1 | For the interaction behaviours attack, chase, wrestle and escape, this column records the target individual (the opponent beetle), for 0 access carcass and 1 access carcass this field is empty | Beetle ID including sex and individual symbol |
+| Event_Type | Type of event |State point = instantaneous event used mainly to record body temperature at a specific time; State start: start time of a continuous behaviour; State stop: end time of a continuous behaviour|
+| beetle_temp | Body temperature of the focal beetle at the time of the event |°C |
+| environment_temp | Temperature of the soil surface in the field of view at the time of the event, represents the local environmental temperature |°C |
+| mouse_temp | Surface temperature of the mouse carcass at the time of the event |°C |
+| e.b.d_temp | Difference between beetle body temperature and environmental temperature |°C |
+| m.b.d_temp | Difference between beetle body temperature and mouse carcass temperature |°C |
+| New_Time | Event time rescaled to a common reference. New_Time is the number of seconds elapsed since 19:00 (7 p.m.) on the recording date. Thus New_Time = 0 corresponds to 19:00 on that date, and all events from all videos are mapped onto this shared time axis. | |
 
 ### **2. `body_temp.csv`**
 
@@ -66,13 +77,13 @@ For each dataset, we list the variable name, definition, and units.
 |nest| Records the unique identification number of the nest | n xxxx |
 |treat| Experimental treatment | control / maggot (blowfly)|
 |gender| Individual sex | male / female|
-|i_width| The width of the pronotum| mm|
+|i_width| The width of the pronotum| mm |
 |i_weight| Individual body weight | mg|
 |i_body| Body weight divided by pronotum width | mg/mm |
 |i_BMI| Body weight / (pronotum width)^2 | mg/mm^2 |
 |i_age| Age of the beetle| days|
 |i_mark| The label of the beetle | the mark pattern |
-|i_invest| Individual investment time| seconds|
+|i_invest| Individual investment time | seconds |
 |mi_hier| Social rank | 1 for alpha, 2 for beta , 3 for gamma |
 |i_conflict| Number of social conflicts| times|
 |mean_temp| Average of relative body temperature | °C |
