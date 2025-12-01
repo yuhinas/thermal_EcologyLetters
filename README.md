@@ -1,4 +1,4 @@
-# Interspecific competition reduces energy expenditure by decreasing intragroup conflict in a social burying beetle
+<img width="187" height="43" alt="image" src="https://github.com/user-attachments/assets/1819263a-d5ba-48c0-99f0-2b3322181f11" /># Interspecific competition reduces energy expenditure by decreasing intragroup conflict in a social burying beetle
 
 [![DOI](https://zenodo.org/badge/958470137.svg)](https://doi.org/10.5281/zenodo.17769641)
 
@@ -27,7 +27,16 @@ For each dataset, we list the variable name, definition, and units.
 
 | Variable | Description | Unit |
 |---------|--------------|------|
-| Date_Time_Absolute_dmy_hmsf | Absolute date–time of each replicate | DD-MM-YYYY hh:mm:ss.sss |
+| Date_Time_Absolute_dmy_hmsf | Absolute date and time when the event was annotated during video analysis | DD-MM-YYYY hh:mm:ss.sss |
+| Date_dmy | Calendar date of the event | DD-MM-YYYY |
+| Time_Absolute_hms | Absolute clock time of the event | hh:mm:ss |
+| Time_Absolute_f | Fractional part of the absolute time in milliseconds, taken from Date_Time_Absolute_dmy_hmsf | |
+| Time_Relative_hmsf | Time of the event relative to the start of the video recording | mm:ss.fraction of a second |
+| Time_Relative_hms | Same relative time as Time_Relative_hmsf, expressed as hour:minute:second | hh:mm:ss |
+| Time_Relative_f | Fractional part of the relative time in milliseconds | DD-MM-YYYY |
+| Date_dmy | Date of measurement | DD-MM-YYYY |
+| Date_dmy | Date of measurement | DD-MM-YYYY |
+
 
 ### **2. `body_temp.csv`**
 
