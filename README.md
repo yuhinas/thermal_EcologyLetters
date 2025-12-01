@@ -55,7 +55,7 @@ For each dataset, we list the variable name, definition, and units.
 |i_body| Body weight divided by pronotum width | mg/mm |
 |i_BMI| Body weight / (pronotum width)^2 | mg/mm^2 |
 |i_age| Age of the beetle| days|
-|i_mark| Tha label of the beetle | the mark pattern |
+|i_mark| The label of the beetle | the mark pattern |
 |i_invest| Individual investment time| seconds|
 |mi_hier| Social rank | 1 for alpha, 2 for beta , 3 for gamma |
 |i_conflict| Number of social conflicts| times|
