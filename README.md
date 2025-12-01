@@ -39,7 +39,7 @@ For each dataset, we list the variable name, definition, and units.
 |Tb.Ts|Tb-Ts|°C |
 |treat| Experimental treatment | control / maggot (blowfly)|
 |mi_hier| Social rank | 1 for alpha, 2 for beta , 3 for gamma |
-|mark| Tha label of the beetle | the mark pattern |
+|mark| The label of the beetle | the mark pattern |
 |nm| Records the unique identification number of the individual across all nests in the entire dataset | (nest number, mark)|
 
 ### **2. `individual.csv`**
@@ -55,7 +55,7 @@ For each dataset, we list the variable name, definition, and units.
 |i_body| Body weight divided by pronotum width | mg/mm |
 |i_BMI| Body weight / (pronotum width)^2 | mg/mm^2 |
 |i_age| Age of the beetle| days|
-|i_mark| Tha label of the beetle | the mark pattern |
+|i_mark| The label of the beetle | the mark pattern |
 |i_invest| Individual investment time| seconds|
 |mi_hier| Social rank | 1 for alpha, 2 for beta , 3 for gamma |
 |i_conflict| Number of social conflicts| times|
@@ -98,16 +98,16 @@ The manuscript results were generated under the following versions:
 
 ### **Package Versions**
 Exact package versions used in the analysis:
-dplyr 1.1.4
-ggplot2 3.5.2
-magrittr 2.0.3
-tidyr 1.3.1
-car 3.1-3
-emmeans 1.11.1
-glmmTMB 1.1.11
-ggsignif 0.6.4
-mgcv 1.9-3
-piecewiseSEM 2.3.1
+- dplyr 1.1.4
+- ggplot2 3.5.2
+- magrittr 2.0.3
+- tidyr 1.3.1
+- car 3.1-3
+- emmeans 1.11.1
+- glmmTMB 1.1.11
+- ggsignif 0.6.4
+- mgcv 1.9-3
+- piecewiseSEM 2.3.1
 
 ### **Required libraries**
 
