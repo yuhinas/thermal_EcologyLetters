@@ -12,6 +12,7 @@ The code provided here allows for the full reproduction of all core statistical 
 
 | File Name | Content |
 | :--- | :--- |
+| `Noldus_raw_data.xlsx` | **Raw Noldus Event**: Unprocessed behavioral and thermal time-series exported directly from Noldus, used to derive the processed datasets below. |
 | `body_temp.csv` | **Time-Series Data**: Detailed records of individual relative body temperature over time. |
 | `individual.csv` | **Individual-Level Data**: Summary data including body temperature, social rank, sex, treatment group (Control/Blowfly), and aggregated behavioral variables. |
 | `behavior.csv` | **Behavioral Time-Series Data**: Detailed time-series records of cooperative investment and conflict behavior across 10 time intervals. |
@@ -22,7 +23,13 @@ The code provided here allows for the full reproduction of all core statistical 
 Below we provide a full variable-level metadata table for all data files included in the repository.  
 For each dataset, we list the variable name, definition, and units.
 
-### **1. `body_temp.csv`**
+### **1. `Noldus_raw_data.xlsx`**
+
+| Variable | Description | Unit |
+|---------|--------------|------|
+| Date_Time_Absolute_dmy_hmsf | Absolute date–time of each replicate | DD-MM-YYYY hh:mm:ss.sss |
+
+### **2. `body_temp.csv`**
 
 | Variable | Description | Unit |
 |---------|--------------|------|
@@ -42,7 +49,7 @@ For each dataset, we list the variable name, definition, and units.
 |mark| The label of the beetle | the mark pattern |
 |nm| Records the unique identification number of the individual across all nests in the entire dataset | (nest number, mark)|
 
-### **2. `individual.csv`**
+### **3. `individual.csv`**
 
 | Variable | Description | Unit |
 |---------|--------------|------|
@@ -76,7 +83,7 @@ For each dataset, we list the variable name, definition, and units.
 |escape_invest|i_escape / i_invest | times/seconds|
 |Tc | The temperature of carcass |°C |
 
-### **3. `behavior.csv`**
+### **4. `behavior.csv`**
 
 | Variable | Description | Unit |
 |---------|--------------|------|
@@ -134,7 +141,15 @@ library(piecewiseSEM) # For Structural Equation Modeling (SEM.R)
 
 This section links each R script file to the corresponding figure and statistical model (M1-M10, SEM, GLMM) in the manuscript.
 
-### 1. Thermal Physiology (LM & GAM)
+### 1. Theoretical model
+
+| Script Name | Figure and Table | Core Model | Key Analysis |
+| :--- | :--- | :--- | :--- |
+| `Fig1_model.nb` | **Figure 1A, 1B, 1C, 1D** | Theoretical model | Implements the theoretical model of cooperative investment, conflict, and energetic cost. |
+
+
+
+### 2. Thermal Physiology (LM & GAM)
 
 | Script Name | Figure and Table | Core Model | Key Analysis |
 | :--- | :--- | :--- | :--- |
@@ -147,7 +162,7 @@ This section links each R script file to the corresponding figure and statistica
 | `M4_FigS3_Half_treatment.R` | **Figure S3A, S3B** | **M4-1, M4-2** | Relative body temperature vs. Treatment (First/Second Half). |
 | `M5_FigS4_social_rank.R` | **Figure S4A-S4D** | **M5-C1, C2, B1, B2** | Relative body temperature vs. Social Rank (Split by Treatment and Time Half). |
 
-### 2. Behavior & Interaction (LM & GAM)
+### 3. Behavior & Interaction (LM & GAM)
 
 | Script Name | Figure and Table | Core Model | Key Analysis |
 | :--- | :--- | :--- | :--- |
@@ -155,12 +170,17 @@ This section links each R script file to the corresponding figure and statistica
 | `M9_M10_Fig4E_4F_behavior.R`| **Figure 4E, 4F** | **M9, M10** | Total Cooperative Investment and Conflict Index vs. Treatment Group. |
 | `FigS5_S6_GAM_behavior.R` | **Figure S5, S6** | GAMs | Smooth trends of Cooperative Investment and Conflict behavior across 10 time intervals. |
 
-### 3. Advanced Statistical Models
+### 4. Advanced Statistical Models
 
 | Script Name | Figure and Table | Core Model | Description |
 | :--- | :--- | :--- | :--- |
 | `location_scale_model.R`| **Figure S7** <br> **Table S4**| **GLMM (Location-Scale)** | Analyzes the effects of Treatment and Rank on the **Mean** (location) and **Variance** (scale) of relative body temperature. |
 | `SEM.R` | **Figure 5** | **pSEM** | Piecewise Structural Equation Model testing the causal pathways among Treatment, Behavior (Conflict/Investment), and relative body temperature. |
+
+
+#### Note on Figure 1 (Theoretical model)
+
+Figure 1 is based on a theoretical model implemented in Wolfram Mathematica. This file is provided as the exact code used to generate Figure 1 and can be opened and run in a standard Wolfram Mathematica environment.
 
 #### Note on Figure 5 (SEM path diagram)
 

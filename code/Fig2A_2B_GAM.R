@@ -3,6 +3,7 @@
 # --------------------------------------------------------------------
 library(mgcv)       # For Generalized Additive Models (GAM)
 library(ggplot2)    # For data visualization
+library(dplyr)
 # --------------------------------------------------------------------
 # 2. Data Loading and Preparation
 # --------------------------------------------------------------------
@@ -151,3 +152,4 @@ figure_2B <- ggplot(data = data_m, aes(x = Time_Relative_sf / 3600, y = Tb.Tc, c
 
 
 print(figure_2B)
+
