@@ -39,7 +39,7 @@ For each dataset, we list the variable name, definition, and units.
 |Tb.Ts|Tb-Ts|°C |
 |treat| Experimental treatment | control / maggot (blowfly)|
 |mi_hier| Social rank | 1 for alpha, 2 for beta , 3 for gamma |
-|mark| Tha label of the beetle | the mark pattern |
+|mark| The label of the beetle | the mark pattern |
 |nm| Records the unique identification number of the individual across all nests in the entire dataset | (nest number, mark)|
 
 ### **2. `individual.csv`**
